@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="ELSMNODY Favicon">
+  <defs>
+    <linearGradient id="goldFav" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#9E7A2A"/>
+      <stop offset="100%" stop-color="#E2C97E"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" fill="#0A0A08"/>
+  <circle cx="16" cy="16" r="14" fill="none" stroke="url(#goldFav)" stroke-width="0.7" opacity="0.6"/>
+  <text x="16" y="22" font-family="'Playfair Display', Georgia, serif" font-size="14" font-weight="400" text-anchor="middle" fill="url(#goldFav)">EB</text>
+</svg>

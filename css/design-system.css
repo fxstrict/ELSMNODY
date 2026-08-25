@@ -1,0 +1,650 @@
+/* ============================================================
+   ELSMNODY BESPOKE — Design System
+   Crafting Presence. Tailoring Influence.
+   Phase 1 — Brand Design System
+   ============================================================ */
+
+/* ============================================================
+   1. COLOR PALETTE
+   ============================================================ */
+:root {
+  /* Primary — Gold */
+  --color-gold:           #C9A84C;
+  --color-gold-light:     #E2C97E;
+  --color-gold-dark:      #9E7A2A;
+  --color-gold-muted:     #C9A84C33; /* 20% opacity */
+
+  /* Backgrounds */
+  --color-bg-deep:        #0A0A08;   /* Near-Black — primary dark bg */
+  --color-bg-dark:        #111109;   /* Slightly lighter dark */
+  --color-bg-card:        #161612;   /* Card backgrounds */
+  --color-bg-overlay:     #0A0A08CC; /* 80% dark overlay */
+
+  /* Neutral Ivory */
+  --color-ivory:          #F5F0E8;
+  --color-ivory-soft:     #EDE8DF;
+  --color-ivory-muted:    #C8C0B0;
+
+  /* Text */
+  --color-text-primary:   #F5F0E8;   /* Main text on dark bg */
+  --color-text-secondary: #C8C0B0;   /* Secondary text */
+  --color-text-muted:     #7A7468;   /* Captions, labels */
+  --color-text-on-light:  #0A0A08;   /* Text on ivory bg */
+
+  /* Accent */
+  --color-accent-red:     #8B1A1A;   /* Deep crimson — judicial / formal */
+  --color-accent-navy:    #1A2744;   /* Navy — executive */
+  --color-white:          #FFFFFF;
+
+  /* State Colors */
+  --color-success:        #2D6A3F;
+  --color-error:          #8B1A1A;
+  --color-warning:        #C9A84C;
+}
+
+/* ============================================================
+   2. TYPOGRAPHY
+   ============================================================ */
+:root {
+  /* Font Families */
+  --font-display:   'Playfair Display', 'Georgia', serif;      /* Headings, hero titles */
+  --font-body:      'Inter', 'Helvetica Neue', sans-serif;     /* Body text, UI */
+  --font-arabic:    'IBM Plex Sans Arabic', 'Tahoma', sans-serif; /* Arabic content */
+  --font-label:     'Inter', sans-serif;                        /* Labels, captions, data */
+
+  /* Type Scale */
+  --text-xs:        0.75rem;    /* 12px — micro labels */
+  --text-sm:        0.875rem;   /* 14px — captions, metadata */
+  --text-base:      1rem;       /* 16px — body */
+  --text-lg:        1.125rem;   /* 18px — large body */
+  --text-xl:        1.25rem;    /* 20px — subheadings */
+  --text-2xl:       1.5rem;     /* 24px — section titles */
+  --text-3xl:       1.875rem;   /* 30px — headings */
+  --text-4xl:       2.25rem;    /* 36px — large headings */
+  --text-5xl:       3rem;       /* 48px — display */
+  --text-6xl:       3.75rem;    /* 60px — hero */
+  --text-7xl:       4.5rem;     /* 72px — mega hero */
+
+  /* Font Weights */
+  --weight-light:   300;
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-semibold:600;
+  --weight-bold:    700;
+  --weight-black:   900;
+
+  /* Letter Spacing */
+  --tracking-tight:  -0.025em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.05em;
+  --tracking-wider:   0.1em;
+  --tracking-widest:  0.2em;   /* For all-caps labels */
+
+  /* Line Height */
+  --leading-tight:    1.2;
+  --leading-snug:     1.35;
+  --leading-normal:   1.6;
+  --leading-relaxed:  1.75;
+}
+
+/* ============================================================
+   3. SPACING
+   ============================================================ */
+:root {
+  --space-1:    0.25rem;   /* 4px */
+  --space-2:    0.5rem;    /* 8px */
+  --space-3:    0.75rem;   /* 12px */
+  --space-4:    1rem;      /* 16px */
+  --space-5:    1.25rem;   /* 20px */
+  --space-6:    1.5rem;    /* 24px */
+  --space-8:    2rem;      /* 32px */
+  --space-10:   2.5rem;    /* 40px */
+  --space-12:   3rem;      /* 48px */
+  --space-16:   4rem;      /* 64px */
+  --space-20:   5rem;      /* 80px */
+  --space-24:   6rem;      /* 96px */
+  --space-32:   8rem;      /* 128px */
+  --space-40:   10rem;     /* 160px */
+
+  /* Section Vertical Padding */
+  --section-py:       var(--space-24);
+  --section-py-lg:    var(--space-32);
+
+  /* Container */
+  --container-max:    1280px;
+  --container-px:     var(--space-6);
+  --container-px-lg:  var(--space-12);
+}
+
+/* ============================================================
+   4. BORDERS & RADIUS
+   ============================================================ */
+:root {
+  --radius-none:   0;
+  --radius-sm:     2px;
+  --radius-md:     4px;
+  --radius-lg:     8px;
+  --radius-xl:     12px;
+  --radius-full:   9999px;
+
+  --border-thin:   1px solid;
+  --border-base:   2px solid;
+
+  /* Gold divider line */
+  --divider-gold:  1px solid var(--color-gold-muted);
+  --divider-light: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ============================================================
+   5. SHADOWS & GLOWS
+   ============================================================ */
+:root {
+  --shadow-sm:     0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md:     0 4px 16px rgba(0,0,0,0.5);
+  --shadow-lg:     0 8px 32px rgba(0,0,0,0.6);
+  --shadow-xl:     0 16px 64px rgba(0,0,0,0.7);
+
+  --glow-gold:     0 0 24px rgba(201,168,76,0.25);
+  --glow-gold-lg:  0 0 48px rgba(201,168,76,0.2);
+}
+
+/* ============================================================
+   6. TRANSITIONS & ANIMATION
+   ============================================================ */
+:root {
+  --ease-luxury:   cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-in-out:   cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out:      cubic-bezier(0, 0, 0.2, 1);
+
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 600ms;
+  --duration-lazy: 900ms;
+
+  --transition-base:    all var(--duration-base) var(--ease-luxury);
+  --transition-color:   color var(--duration-base) var(--ease-luxury),
+                        background-color var(--duration-base) var(--ease-luxury),
+                        border-color var(--duration-base) var(--ease-luxury);
+  --transition-transform: transform var(--duration-base) var(--ease-out);
+}
+
+/* ============================================================
+   7. Z-INDEX SCALE
+   ============================================================ */
+:root {
+  --z-below:   -1;
+  --z-base:     0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+}
+
+/* ============================================================
+   8. BUTTON SYSTEM
+   ============================================================ */
+
+/* Base button reset */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: var(--transition-base);
+  white-space: nowrap;
+  padding: var(--space-4) var(--space-8);
+}
+
+/* Primary — Gold filled */
+.btn-primary {
+  background: var(--color-gold);
+  color: var(--color-bg-deep);
+  border-color: var(--color-gold);
+}
+.btn-primary:hover {
+  background: var(--color-gold-light);
+  border-color: var(--color-gold-light);
+  box-shadow: var(--glow-gold);
+  transform: translateY(-1px);
+}
+
+/* Secondary — Outlined gold */
+.btn-secondary {
+  background: transparent;
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+.btn-secondary:hover {
+  background: var(--color-gold-muted);
+  box-shadow: var(--glow-gold);
+}
+
+/* Ghost — No border, subtle */
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border-color: var(--divider-light);
+}
+.btn-ghost:hover {
+  color: var(--color-text-primary);
+  border-color: var(--color-ivory-muted);
+}
+
+/* Luxury CTA — Full width, large */
+.btn-luxury {
+  background: linear-gradient(135deg, var(--color-gold-dark), var(--color-gold), var(--color-gold-light));
+  color: var(--color-bg-deep);
+  border: none;
+  padding: var(--space-5) var(--space-12);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  box-shadow: var(--glow-gold);
+}
+.btn-luxury:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-gold-lg);
+}
+
+/* WhatsApp CTA */
+.btn-whatsapp {
+  background: #25D366;
+  color: var(--color-white);
+  border-color: #25D366;
+}
+.btn-whatsapp:hover {
+  background: #1fba58;
+  transform: translateY(-1px);
+}
+
+/* Button Sizes */
+.btn-sm { padding: var(--space-2) var(--space-5); font-size: var(--text-xs); }
+.btn-lg { padding: var(--space-5) var(--space-10); font-size: var(--text-base); }
+
+/* ============================================================
+   9. CARD SYSTEM
+   ============================================================ */
+
+/* Base Card */
+.card {
+  background: var(--color-bg-card);
+  border: var(--divider-gold);
+  transition: var(--transition-base);
+  overflow: hidden;
+}
+.card:hover {
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-lg), var(--glow-gold);
+  transform: translateY(-4px);
+}
+
+/* Collection Card */
+.card-collection {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+.card-collection .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-luxury);
+}
+.card-collection:hover .card-img {
+  transform: scale(1.05);
+}
+.card-collection .card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, var(--color-bg-deep) 0%, transparent 60%);
+  padding: var(--space-8) var(--space-6);
+}
+
+/* Service Card */
+.card-service {
+  padding: var(--space-8);
+  text-align: center;
+}
+.card-service .card-icon {
+  font-size: var(--text-4xl);
+  color: var(--color-gold);
+  margin-bottom: var(--space-4);
+}
+
+/* Gallery Card */
+.card-gallery {
+  overflow: hidden;
+  cursor: pointer;
+}
+.card-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-luxury);
+}
+.card-gallery:hover img {
+  transform: scale(1.08);
+}
+
+/* Testimonial Card */
+.card-testimonial {
+  padding: var(--space-8);
+  border-left: 3px solid var(--color-gold);
+}
+
+/* Blog Card */
+.card-blog {
+  overflow: hidden;
+}
+.card-blog .card-content {
+  padding: var(--space-6);
+}
+
+/* ============================================================
+   10. FORM SYSTEM
+   ============================================================ */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-label {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  background: var(--color-bg-card);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  padding: var(--space-4) var(--space-5);
+  transition: border-color var(--duration-base) var(--ease-luxury),
+              box-shadow var(--duration-base) var(--ease-luxury);
+  width: 100%;
+  outline: none;
+}
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-text-muted);
+}
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px var(--color-gold-muted);
+}
+
+/* Validation States */
+.form-input.is-valid   { border-color: var(--color-success); }
+.form-input.is-error   { border-color: var(--color-error); }
+
+.form-error-msg {
+  font-size: var(--text-xs);
+  color: var(--color-error);
+  margin-top: var(--space-1);
+}
+
+/* File Upload */
+.form-upload {
+  border: 1px dashed var(--color-gold-muted);
+  padding: var(--space-8);
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+.form-upload:hover {
+  border-color: var(--color-gold);
+  background: var(--color-gold-muted);
+}
+
+/* ============================================================
+   11. ANIMATION SYSTEM
+   ============================================================ */
+
+/* Fade In Up — scroll reveal */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In — simple reveal */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Gold shimmer — for logo / luxury elements */
+@keyframes goldShimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Subtle float — hero decorative elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+/* Scroll reveal classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--duration-slow) var(--ease-out),
+              transform var(--duration-slow) var(--ease-out);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for children */
+.reveal-delay-1 { transition-delay: 100ms; }
+.reveal-delay-2 { transition-delay: 200ms; }
+.reveal-delay-3 { transition-delay: 300ms; }
+.reveal-delay-4 { transition-delay: 400ms; }
+.reveal-delay-5 { transition-delay: 500ms; }
+
+/* Gold shimmer text utility */
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-gold-dark) 0%,
+    var(--color-gold-light) 25%,
+    var(--color-gold) 50%,
+    var(--color-gold-light) 75%,
+    var(--color-gold-dark) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldShimmer 3s linear infinite;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal                 { transition: none; opacity: 1; transform: none; }
+  .text-shimmer           { animation: none; }
+  *                       { animation-duration: 0.01ms !important; }
+}
+
+/* ============================================================
+   12. UTILITY CLASSES
+   ============================================================ */
+
+/* Gold text */
+.text-gold        { color: var(--color-gold); }
+.text-ivory       { color: var(--color-ivory); }
+.text-muted       { color: var(--color-text-muted); }
+
+/* Dividers */
+.divider-gold {
+  width: 60px;
+  height: 1px;
+  background: var(--color-gold);
+  margin: var(--space-6) auto;
+}
+.divider-gold-left {
+  width: 60px;
+  height: 1px;
+  background: var(--color-gold);
+  margin: var(--space-6) 0;
+}
+
+/* Eyebrow label — above section titles */
+.eyebrow {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
+/* Section layout */
+.section {
+  padding: var(--section-py) 0;
+}
+.section-dark {
+  background: var(--color-bg-deep);
+}
+.section-card {
+  background: var(--color-bg-dark);
+}
+
+/* Container */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--container-px);
+  padding-right: var(--container-px);
+}
+
+/* Section heading group */
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto var(--space-16);
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-regular);
+  color: var(--color-text-primary);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+.section-subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-top: var(--space-4);
+}
+
+/* ============================================================
+   13. BASE RESET & ROOT STYLES
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden; /* شبكة أمان: تمنع تمدد الصفحة أفقياً على الشاشات الصغيرة لو أي عنصر تعدّى عرض الفيوبورت بالخطأ */
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-deep);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* RTL Arabic support */
+[dir="rtl"],
+.rtl {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  text-align: right;
+}
+
+/* ============================================================
+   14. RESPONSIVE BREAKPOINTS
+   ============================================================ */
+/*
+  Mobile first:
+  sm:  >= 640px
+  md:  >= 768px
+  lg:  >= 1024px
+  xl:  >= 1280px
+  2xl: >= 1536px
+*/
+
+@media (min-width: 768px) {
+  :root {
+    --container-px: var(--container-px-lg);
+    --section-py:   var(--section-py-lg);
+  }
+  .section-title { font-size: var(--text-5xl); }
+}
+
+@media (min-width: 1024px) {
+  .section-title { font-size: var(--text-6xl); }
+}

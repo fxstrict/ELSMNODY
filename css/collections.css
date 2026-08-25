@@ -1,0 +1,650 @@
+/* ============================================================
+   ELSMNODY BESPOKE — Collections CSS
+   Phase 3: Collections Pages
+   ============================================================ */
+
+/* ============================================================
+   HERO — Short (60vh)
+   ============================================================ */
+.coll-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 480px;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.coll-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10,10,8,0.45) 0%,
+    rgba(10,10,8,0.2)  35%,
+    rgba(10,10,8,0.75) 75%,
+    rgba(10,10,8,0.97) 100%
+  );
+}
+.coll-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-px) var(--space-16);
+  width: 100%;
+}
+.coll-hero__back {
+  display: inline-block;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-5);
+  transition: opacity var(--duration-base) var(--ease-luxury);
+  opacity: 0.8;
+}
+.coll-hero__back:hover { opacity: 1; }
+
+[dir="rtl"] .coll-hero__back {
+  display: inline-block;
+  unicode-bidi: embed;
+}
+
+.coll-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: var(--weight-regular);
+  color: var(--color-ivory);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  margin: var(--space-3) 0 var(--space-4);
+  animation: fadeInUp 0.8s var(--ease-out) 0.2s both;
+}
+.coll-hero__sub {
+  font-size: var(--text-lg);
+  color: var(--color-ivory-muted);
+  max-width: 560px;
+  line-height: var(--leading-relaxed);
+  font-weight: var(--weight-light);
+  animation: fadeInUp 0.8s var(--ease-out) 0.4s both;
+}
+.coll-hero__scroll {
+  position: absolute;
+  bottom: var(--space-6);
+  right: 50%;
+  transform: translateX(50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  animation: float 3s ease-in-out infinite;
+}
+.coll-hero__scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--color-gold), transparent);
+}
+
+/* ============================================================
+   DESC + FEATURES — 2-col layout
+   ============================================================ */
+.coll-desc {
+  padding: var(--section-py) 0;
+  background: var(--color-bg-deep);
+}
+.coll-desc__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-20);
+  align-items: start;
+}
+.coll-desc__text { padding-top: var(--space-4); }
+
+.coll-desc__title {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-regular);
+  color: var(--color-ivory);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-2);
+}
+[dir="rtl"] .coll-desc__title {
+  font-family: 'IBM Plex Sans Arabic', serif;
+}
+
+.coll-desc__body {
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  font-size: var(--text-lg);
+  margin-top: var(--space-6);
+}
+
+/* Features column */
+.coll-desc__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding-top: var(--space-4);
+}
+.coll-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-bg-card);
+  border: var(--divider-gold);
+  transition: var(--transition-base);
+}
+.coll-feature:hover {
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-md), var(--glow-gold);
+  transform: translateX(-4px);
+}
+[dir="ltr"] .coll-feature:hover { transform: translateX(4px); }
+
+.coll-feature__icon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 2px;
+}
+.coll-feature__title {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  color: var(--color-gold-light);
+  font-weight: var(--weight-regular);
+  margin-bottom: var(--space-1);
+}
+[dir="rtl"] .coll-feature__title {
+  font-family: 'IBM Plex Sans Arabic', serif;
+  font-weight: var(--weight-medium);
+}
+.coll-feature__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+@media (max-width: 900px) {
+  .coll-desc__inner { grid-template-columns: 1fr; gap: var(--space-10); }
+}
+
+/* ============================================================
+   GALLERY GRID — 3-col masonry-like
+   ============================================================ */
+.coll-gallery {
+  padding: var(--section-py) 0;
+  background: var(--color-bg-dark);
+}
+.coll-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: var(--space-3);
+  margin-top: var(--space-16);
+}
+
+/* First image spans 2 rows for visual weight */
+.coll-gallery__item:first-child {
+  grid-row: span 2;
+}
+.coll-gallery__item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: var(--divider-gold);
+  aspect-ratio: 4/3;
+}
+.coll-gallery__item:first-child {
+  aspect-ratio: unset;
+}
+.coll-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--duration-slow) var(--ease-luxury);
+}
+.coll-gallery__item:hover img { transform: scale(1.06); }
+.coll-gallery__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,10,8,0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--duration-base) var(--ease-luxury);
+}
+.coll-gallery__item:hover .coll-gallery__overlay { background: rgba(10,10,8,0.38); }
+.coll-gallery__icon {
+  font-size: 2rem;
+  color: var(--color-gold);
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity var(--duration-base) var(--ease-out),
+              transform var(--duration-base) var(--ease-out);
+}
+.coll-gallery__item:hover .coll-gallery__icon { opacity: 1; transform: scale(1); }
+
+@media (max-width: 768px) {
+  .coll-gallery__grid { grid-template-columns: repeat(2, 1fr); }
+  .coll-gallery__item:first-child { grid-row: span 1; aspect-ratio: 4/3; }
+}
+@media (max-width: 480px) {
+  .coll-gallery__grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   SPECS TABLE + CTA BOX
+   ============================================================ */
+.coll-specs {
+  padding: var(--section-py) 0;
+  background: var(--color-bg-deep);
+  border-top: var(--divider-gold);
+}
+.coll-specs__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: start;
+}
+.coll-specs__title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-regular);
+  color: var(--color-ivory);
+  margin-bottom: var(--space-2);
+}
+[dir="rtl"] .coll-specs__title {
+  font-family: 'IBM Plex Sans Arabic', serif;
+}
+.coll-specs__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-8);
+}
+.coll-specs__table tr {
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+  transition: background var(--duration-fast) var(--ease-luxury);
+}
+.coll-specs__table tr:last-child { border-bottom: none; }
+.coll-specs__table tr:hover { background: rgba(201,168,76,0.04); }
+.coll-specs__label {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-gold);
+  padding: var(--space-4) var(--space-4) var(--space-4) 0;
+  white-space: nowrap;
+  width: 40%;
+}
+[dir="rtl"] .coll-specs__label {
+  padding: var(--space-4) 0 var(--space-4) var(--space-4);
+  text-align: right;
+}
+.coll-specs__value {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  padding: var(--space-4) 0;
+  line-height: var(--leading-relaxed);
+}
+
+/* CTA box */
+.coll-specs__cta {
+  background: var(--color-bg-card);
+  border: var(--divider-gold);
+  border-top: 3px solid var(--color-gold);
+  padding: var(--space-10) var(--space-8);
+  position: sticky;
+  top: var(--space-24);
+}
+.coll-specs__cta-title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--color-ivory);
+  font-weight: var(--weight-regular);
+  margin-bottom: var(--space-4);
+  line-height: var(--leading-snug);
+}
+[dir="rtl"] .coll-specs__cta-title {
+  font-family: 'IBM Plex Sans Arabic', serif;
+}
+.coll-specs__cta-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+@media (max-width: 900px) {
+  .coll-specs__inner { grid-template-columns: 1fr; }
+  .coll-specs__cta { position: static; }
+}
+
+/* ============================================================
+   OTHER COLLECTIONS STRIP
+   ============================================================ */
+.coll-others {
+  padding: var(--section-py) 0;
+  background: var(--color-bg-dark);
+  border-top: var(--divider-gold);
+}
+.coll-others__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-16);
+}
+.coll-others__card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border: var(--divider-gold);
+  transition: var(--transition-base);
+  text-decoration: none;
+}
+.coll-others__card:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg), var(--glow-gold);
+}
+.coll-others__img-wrap {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+.coll-others__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-luxury);
+}
+.coll-others__card:hover .coll-others__img-wrap img { transform: scale(1.06); }
+.coll-others__overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--accent, rgba(10,10,8,0.1));
+}
+.coll-others__label {
+  padding: var(--space-5) var(--space-5);
+  background: var(--color-bg-card);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.coll-others__title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-ivory);
+  font-weight: var(--weight-regular);
+}
+[dir="rtl"] .coll-others__title {
+  font-family: 'IBM Plex Sans Arabic', serif;
+}
+.coll-others__arrow {
+  font-size: var(--text-lg);
+  color: var(--color-gold);
+  margin-top: var(--space-2);
+  transition: transform var(--duration-base) var(--ease-luxury);
+  display: inline-block;
+}
+.coll-others__card:hover .coll-others__arrow { transform: translateX(4px); }
+[dir="rtl"] .coll-others__card:hover .coll-others__arrow { transform: translateX(-4px); }
+
+@media (max-width: 768px) {
+  .coll-others__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .coll-others__grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,10,8,0.96);
+  z-index: var(--z-modal);
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.lightbox.open { display: flex; }
+.lightbox__img {
+  max-width: 90vw;
+  max-height: 88vh;
+  object-fit: contain;
+  border: var(--divider-gold);
+  box-shadow: var(--shadow-xl);
+}
+.lightbox__close {
+  position: absolute;
+  top: var(--space-6);
+  right: var(--space-6);
+  background: none;
+  border: 1px solid rgba(201,168,76,0.3);
+  color: var(--color-ivory);
+  font-size: var(--text-xl);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+.lightbox__close:hover { border-color: var(--color-gold); color: var(--color-gold); }
+
+/* ============================================================
+   WHATSAPP FLOAT
+   ============================================================ */
+.wa-float {
+  position: fixed;
+  bottom: var(--space-8);
+  right: var(--space-6);
+  z-index: var(--z-toast);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+  transition: transform var(--duration-base) var(--ease-luxury);
+  animation: float 3s ease-in-out infinite;
+}
+.wa-float:hover { transform: scale(1.1); animation: none; }
+.wa-float svg { width: 28px; height: 28px; fill: #fff; }
+.wa-float__pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #25D366;
+  animation: waPulse 2.5s ease-out infinite;
+}
+@keyframes waPulse {
+  0%   { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+/* ============================================================
+   NAVBAR (shared — same as home.css)
+   ============================================================ */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: var(--z-sticky);
+  padding: var(--space-5) 0;
+  transition: background var(--duration-slow) var(--ease-luxury),
+              padding var(--duration-slow) var(--ease-luxury),
+              box-shadow var(--duration-slow) var(--ease-luxury);
+}
+.navbar.scrolled {
+  background: rgba(10,10,8,0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: var(--space-3) 0;
+  box-shadow: 0 1px 0 rgba(201,168,76,0.12);
+}
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+.navbar__logo { height: 44px; width: auto; }
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  list-style: none;
+}
+.navbar__links a {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-ivory-muted);
+  transition: color var(--duration-base) var(--ease-luxury);
+  position: relative;
+}
+.navbar__links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 1px;
+  background: var(--color-gold);
+  transition: width var(--duration-base) var(--ease-luxury);
+}
+.navbar__links a:hover { color: var(--color-gold); }
+.navbar__links a:hover::after { width: 100%; }
+.navbar__cta { display: flex; align-items: center; gap: var(--space-3); }
+.navbar__toggle {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: var(--space-2);
+}
+.navbar__toggle span { display: block; width: 24px; height: 1px; background: var(--color-ivory); }
+.navbar__mobile {
+  display: none; position: fixed; inset: 0;
+  background: var(--color-bg-deep); z-index: var(--z-modal);
+  flex-direction: column; align-items: center; justify-content: center; gap: var(--space-8);
+}
+.navbar__mobile.open { display: flex; }
+.navbar__mobile a {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  color: var(--color-ivory);
+  letter-spacing: var(--tracking-wide);
+  transition: color var(--duration-base) var(--ease-luxury);
+}
+.navbar__mobile a:hover { color: var(--color-gold); }
+.navbar__mobile-close {
+  position: absolute; top: var(--space-6); right: var(--space-6);
+  background: none; border: none; color: var(--color-ivory);
+  font-size: var(--text-2xl); cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .navbar__links, .navbar__cta { display: none; }
+  .navbar__toggle { display: flex; }
+}
+
+/* ============================================================
+   RTL ADJUSTMENTS (collections-specific)
+   ============================================================ */
+[dir="rtl"] .navbar__links,
+[dir="rtl"] .navbar__cta { flex-direction: row-reverse; }
+
+[dir="rtl"] .coll-desc__features .coll-feature { flex-direction: row-reverse; }
+
+[dir="rtl"] .coll-specs__label {
+  text-align: right;
+}
+
+[dir="rtl"] .wa-float { right: auto; left: var(--space-6); }
+
+[dir="rtl"] .lightbox__close { right: auto; left: var(--space-6); }
+
+[dir="rtl"] body, [dir="rtl"] p, [dir="rtl"] td,
+[dir="rtl"] span:not(.eyebrow) {
+  font-family: var(--font-arabic);
+}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3,[dir="rtl"] h4 {
+  font-family: 'IBM Plex Sans Arabic', serif;
+}
+
+/* ============================================================
+   RESPONSIVE PADDING
+   ============================================================ */
+@media (min-width: 768px) {
+  :root {
+    --container-px: var(--container-px-lg);
+    --section-py: var(--section-py-lg);
+  }
+}
+
+/* ============================================================
+   COLLECTIONS INDEX GRID (collections.html)
+   أضيفت لأن #ci-grid كانت موجودة في الـ HTML بدون أي تنسيق —
+   لم تكن مربوطة بأي CSS ولا JS قبل هذا التعديل.
+   ============================================================ */
+.collections-index-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+.collections-index-grid__card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border: var(--divider-gold);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+.collections-index-grid__card:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg), var(--glow-gold);
+}
+.collections-index-grid__img-wrap {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+.collections-index-grid__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-luxury);
+}
+.collections-index-grid__card:hover .collections-index-grid__img-wrap img {
+  transform: scale(1.06);
+}
+.collections-index-grid__title {
+  padding: var(--space-5);
+  background: var(--color-bg-card);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-ivory);
+  font-weight: var(--weight-regular);
+  text-align: center;
+}
+[dir="rtl"] .collections-index-grid__title {
+  font-family: 'IBM Plex Sans Arabic', serif;
+}
+
+@media (max-width: 768px) {
+  .collections-index-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .collections-index-grid { grid-template-columns: 1fr; }
+}

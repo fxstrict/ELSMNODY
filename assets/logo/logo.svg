@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" role="img" aria-label="ELSMNODY BESPOKE">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#9E7A2A"/>
+      <stop offset="35%"  stop-color="#C9A84C"/>
+      <stop offset="65%"  stop-color="#E2C97E"/>
+      <stop offset="100%" stop-color="#C9A84C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Brand Name -->
+  <text
+    x="200" y="52"
+    font-family="'Playfair Display', Georgia, serif"
+    font-size="30"
+    font-weight="400"
+    letter-spacing="8"
+    text-anchor="middle"
+    fill="url(#goldGrad)"
+  >ELSMNODY</text>
+
+  <!-- Divider line -->
+  <line x1="80" y1="62" x2="320" y2="62" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.6"/>
+
+  <!-- Tagline -->
+  <text
+    x="200" y="80"
+    font-family="'Inter', Helvetica, sans-serif"
+    font-size="9"
+    font-weight="300"
+    letter-spacing="5"
+    text-anchor="middle"
+    fill="#C9A84C"
+    opacity="0.85"
+  >BESPOKE</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="EB Monogram">
+  <defs>
+    <linearGradient id="goldMono" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#9E7A2A"/>
+      <stop offset="50%"  stop-color="#E2C97E"/>
+      <stop offset="100%" stop-color="#C9A84C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="50" cy="50" r="47" fill="none" stroke="url(#goldMono)" stroke-width="0.8" opacity="0.5"/>
+  <circle cx="50" cy="50" r="43" fill="none" stroke="url(#goldMono)" stroke-width="0.3" opacity="0.3"/>
+
+  <!-- Monogram — E B letters -->
+  <text
+    x="50" y="62"
+    font-family="'Playfair Display', Georgia, serif"
+    font-size="40"
+    font-weight="400"
+    letter-spacing="-2"
+    text-anchor="middle"
+    fill="url(#goldMono)"
+  >EB</text>
+</svg>

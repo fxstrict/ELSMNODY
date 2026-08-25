@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 80" role="img" aria-label="ELSMNODY BESPOKE Horizontal">
+  <defs>
+    <linearGradient id="goldH" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#9E7A2A"/>
+      <stop offset="50%"  stop-color="#E2C97E"/>
+      <stop offset="100%" stop-color="#C9A84C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Monogram mark -->
+  <circle cx="40" cy="40" r="30" fill="none" stroke="url(#goldH)" stroke-width="0.8" opacity="0.5"/>
+  <text x="40" y="50" font-family="'Playfair Display', Georgia, serif" font-size="24" font-weight="400" text-anchor="middle" fill="url(#goldH)">EB</text>
+
+  <!-- Vertical divider -->
+  <line x1="82" y1="15" x2="82" y2="65" stroke="#C9A84C" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Brand name -->
+  <text x="100" y="38" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="400" letter-spacing="5" fill="url(#goldH)">ELSMNODY</text>
+
+  <!-- Tagline -->
+  <text x="100" y="60" font-family="'Inter', Helvetica, sans-serif" font-size="9" font-weight="300" letter-spacing="5" fill="#C9A84C" opacity="0.7">BESPOKE</text>
+</svg>

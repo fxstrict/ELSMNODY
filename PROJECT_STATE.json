@@ -1,0 +1,88 @@
+{
+  "project": "ELSMNODY BESPOKE",
+  "tagline": "Crafting Presence. Tailoring Influence.",
+  "repository": "fxstrict/ELSMNODY",
+  "hosting": "GitHub Pages",
+  "status": "FULLY FIXED — READY FOR DEPLOYMENT ✅",
+  "current_phase": 10,
+  "completed_phases": [1,2,3,4,5,6,7,8,9,10],
+  "all_phases_complete": true,
+  "ready_for_deployment": true,
+  "hotfix_applied": "2026-06-27",
+
+  "hotfix_summary": {
+    "critical_fixed": [
+      "✅ رقم WhatsApp: 201555277205 — محدَّث في 20 موضع في كل الملفات",
+      "✅ رقم الهاتف المعروض في Footer: +20 155 527 7205",
+      "✅ collections/tuxedo.html أُنشئت (كانت مفقودة — سببت 404)"
+    ],
+    "warnings_fixed": [
+      "✅ og:image في index.html — أصبح URL مطلق (raw.githubusercontent.com)",
+      "✅ og:image في about.html — أصبح URL مطلق",
+      "✅ og:image في gallery.html — أصبح URL مطلق",
+      "✅ og:image في fabrics.html — أصبح URL مطلق",
+      "✅ رقم الهاتف في seo.js / Schema Markup: +201555277205",
+      "✅ seo.js أُضيف لمقالات البلوج الخمسة (بدون seo.js كانت)"
+    ],
+    "remaining_before_launch": [
+      "تحديث SCRIPT_URL في js/booking-api.js بعد نشر Google Apps Script",
+      "تحديث CONFIG في google-apps-script/Code.gs (SHEET_ID + DRIVE_FOLDER_ID + ADMIN_EMAIL)",
+      "تشغيل setupInitialSheet() مرة واحدة في Google Apps Script editor",
+      "اقرأ docs/setup-google.md لكل التفاصيل"
+    ]
+  },
+
+  "brand": {
+    "name": "ELSMNODY BESPOKE",
+    "founder": "محمد السمنودي",
+    "target_audience": "رجال الأعمال، القضاة، المحامين، والمديرين التنفيذيين في مصر والخليج والعالم",
+    "whatsapp_number": "201555277205",
+    "phone_display": "+20 155 527 7205",
+    "google_sheets_id": "REPLACE_WITH_YOUR_SPREADSHEET_ID",
+    "google_drive_folder_id": "REPLACE_WITH_YOUR_DRIVE_FOLDER_ID",
+    "site_url": "https://fxstrict.github.io/ELSMNODY"
+  },
+
+  "deployment_checklist": {
+    "done": [
+      "✅ رقم WhatsApp: 201555277205 — كل الملفات",
+      "✅ صفحة tuxedo.html موجودة",
+      "✅ كل og:image بـ URLs مطلقة",
+      "✅ Schema Markup بالرقم الصحيح",
+      "✅ seo.js في كل صفحات البلوج",
+      "✅ كل CSS و JS و Assets كاملة (78 ملف)"
+    ],
+    "github_pages": [
+      "رفع كل الملفات على الـ repository: fxstrict/ELSMNODY",
+      "تفعيل GitHub Pages من Settings → Pages → Source: main branch / root",
+      "الموقع سيكون متاحاً على: https://fxstrict.github.io/ELSMNODY"
+    ],
+    "google_apps_script": [
+      "تحديث SCRIPT_URL في js/booking-api.js بعد نشر Google Apps Script",
+      "تحديث CONFIG في google-apps-script/Code.gs (SHEET_ID + DRIVE_FOLDER_ID + ADMIN_EMAIL)",
+      "تشغيل setupInitialSheet() مرة واحدة في Google Apps Script editor",
+      "اقرأ docs/setup-google.md لكل التفاصيل"
+    ],
+    "seo_after_launch": [
+      "إضافة الموقع إلى Google Search Console",
+      "رفع sitemap.xml في Search Console",
+      "إضافة الموقع إلى Bing Webmaster Tools"
+    ]
+  },
+
+  "phases_overview": {
+    "1": "Design System & Brand Assets — DONE ✅",
+    "2": "Homepage UI (Bilingual AR/EN RTL/LTR) — DONE ✅",
+    "3": "Collections Pages (5 pages + index) — DONE ✅",
+    "4": "About Founder Page — DONE ✅",
+    "5": "Fabric Collection Page — DONE ✅",
+    "6": "Gallery System — DONE ✅",
+    "7": "Booking System UI — DONE ✅",
+    "8": "Google Integration (Sheets + Drive + Email) — DONE ✅",
+    "9": "WhatsApp System — DONE ✅",
+    "10": "SEO System (Meta + OG + Schema + Sitemap + Blog × 5) — DONE ✅",
+    "hotfix": "All Bugs Fixed (7 issues resolved) — DONE ✅"
+  },
+
+  "commit_images": "70ce58e3bf6f77fe707949858f531bbeb6d7fe0c"
+}

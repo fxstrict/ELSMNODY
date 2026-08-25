@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="احجز موعد تفصيل مع إلسمنودي بيسبوك — نظام الحجز الفاخر">
+  <title>احجز موعدك | ELSMNODY BESPOKE</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/booking.css">
+  <link rel="stylesheet" href="css/whatsapp.css">
+</head>
+<body>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/logo/logo-horizontal.svg" alt="ELSMNODY BESPOKE" class="navbar__logo-img">
+      </a>
+      <nav class="navbar__links" id="navLinks">
+        <a href="index.html"         class="nav-link" data-key="nav_home"></a>
+        <a href="collections.html"   class="nav-link" data-key="nav_collections"></a>
+        <a href="fabrics.html"       class="nav-link" data-key="nav_fabrics"></a>
+        <a href="about.html"         class="nav-link" data-key="nav_about"></a>
+        <a href="gallery.html"       class="nav-link" data-key="nav_gallery"></a>
+        <a href="contact.html"       class="nav-link active" data-key="nav_contact"></a>
+      </nav>
+      <div class="navbar__cta">
+        <button class="btn-lang" id="langToggle" onclick="Lang.toggle()"></button>
+        <a href="contact.html" class="btn-primary btn-sm" data-key="nav_book"></a>
+      </div>
+      <button class="navbar__burger" id="burger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="booking-hero">
+    <div class="booking-hero__bg">
+      <img src="assets/images/tailoring/tailoring-measurement.webp" alt="Tailoring" loading="eager">
+      <div class="booking-hero__overlay"></div>
+    </div>
+    <div class="booking-hero__content">
+      <p class="eyebrow" data-key="book_eyebrow"></p>
+      <h1 class="booking-hero__title" data-key="book_hero_title"></h1>
+      <p class="booking-hero__subtitle" data-key="book_hero_subtitle"></p>
+      <div class="booking-hero__steps">
+        <div class="hero-step"><span class="hero-step__num">01</span><span class="hero-step__label" data-key="book_step1_label"></span></div>
+        <div class="hero-step__sep">→</div>
+        <div class="hero-step"><span class="hero-step__num">02</span><span class="hero-step__label" data-key="book_step2_label"></span></div>
+        <div class="hero-step__sep">→</div>
+        <div class="hero-step"><span class="hero-step__num">03</span><span class="hero-step__label" data-key="book_step3_label"></span></div>
+        <div class="hero-step__sep">→</div>
+        <div class="hero-step"><span class="hero-step__num">04</span><span class="hero-step__label" data-key="book_step4_label"></span></div>
+      </div>
+    </div>
+    <div class="booking-hero__scroll">
+      <div class="scroll-line"></div>
+      <span data-key="scroll_down"></span>
+    </div>
+  </section>
+
+  <!-- ══════════════ MAIN BOOKING FORM ══════════════ -->
+  <main class="booking-main">
+    <div class="booking-container">
+
+      <!-- Progress Bar -->
+      <div class="booking-progress">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-steps" id="progressSteps">
+          <button class="progress-step active" data-step="1" onclick="goToStep(1)">
+            <span class="step-num">1</span>
+            <span class="step-name" data-key="prog_personal"></span>
+          </button>
+          <button class="progress-step" data-step="2" onclick="goToStep(2)">
+            <span class="step-num">2</span>
+            <span class="step-name" data-key="prog_service"></span>
+          </button>
+          <button class="progress-step" data-step="3" onclick="goToStep(3)">
+            <span class="step-num">3</span>
+            <span class="step-name" data-key="prog_measurements"></span>
+          </button>
+          <button class="progress-step" data-step="4" onclick="goToStep(4)">
+            <span class="step-num">4</span>
+            <span class="step-name" data-key="prog_customizer"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ── STEP 1: Personal Info ── -->
+      <div class="booking-step" id="step1" data-step="1">
+        <div class="step-header">
+          <span class="step-eyebrow" data-key="prog_personal"></span>
+          <h2 class="step-title" data-key="step1_title"></h2>
+          <p class="step-desc" data-key="step1_desc"></p>
+        </div>
+        <div class="form-grid">
+          <div class="form-group form-group--full">
+            <label class="form-label" data-key="field_fullname"></label>
+            <input type="text" class="form-input" id="fullName" placeholder="" data-ph="ph_fullname" required>
+            <span class="form-error" data-key="err_required"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-key="field_country"></label>
+            <div class="form-select-wrap">
+              <select class="form-select" id="country">
+                <option value="" data-key="ph_country"></option>
+                <option value="EG">🇪🇬 مصر / Egypt</option>
+                <option value="SA">🇸🇦 السعودية / Saudi Arabia</option>
+                <option value="AE">🇦🇪 الإمارات / UAE</option>
+                <option value="KW">🇰🇼 الكويت / Kuwait</option>
+                <option value="QA">🇶🇦 قطر / Qatar</option>
+                <option value="BH">🇧🇭 البحرين / Bahrain</option>
+                <option value="OM">🇴🇲 عُمان / Oman</option>
+                <option value="JO">🇯🇴 الأردن / Jordan</option>
+                <option value="LB">🇱🇧 لبنان / Lebanon</option>
+                <option value="UK">🇬🇧 المملكة المتحدة / UK</option>
+                <option value="FR">🇫🇷 فرنسا / France</option>
+                <option value="DE">🇩🇪 ألمانيا / Germany</option>
+                <option value="US">🇺🇸 الولايات المتحدة / USA</option>
+                <option value="OTHER" data-key="country_other"></option>
+              </select>
+            </div>
+            <span class="form-error" data-key="err_required"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-key="field_city"></label>
+            <input type="text" class="form-input" id="city" placeholder="" data-ph="ph_city" required>
+            <span class="form-error" data-key="err_required"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-key="field_whatsapp"></label>
+            <div class="phone-input-wrap">
+              <span class="phone-prefix">+</span>
+              <input type="tel" class="form-input phone-input" id="whatsapp" placeholder="" data-ph="ph_whatsapp" required>
+            </div>
+            <span class="form-hint" data-key="hint_whatsapp"></span>
+            <span class="form-error" data-key="err_phone"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-key="field_email"></label>
+            <input type="email" class="form-input" id="email" placeholder="" data-ph="ph_email">
+            <span class="form-hint" data-key="hint_email"></span>
+          </div>
+        </div>
+        <div class="step-actions">
+          <button class="btn-next" onclick="nextStep(1)">
+            <span data-key="btn_next"></span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- ── STEP 2: Service ── -->
+      <div class="booking-step hidden" id="step2" data-step="2">
+        <div class="step-header">
+          <span class="step-eyebrow" data-key="prog_service"></span>
+          <h2 class="step-title" data-key="step2_title"></h2>
+          <p class="step-desc" data-key="step2_desc"></p>
+        </div>
+
+        <!-- Service Type -->
+        <div class="service-cards" id="serviceCards">
+          <label class="service-card" data-service="bespoke">
+            <input type="radio" name="service" value="bespoke">
+            <div class="service-card__inner">
+              <div class="service-card__icon">✦</div>
+              <h3 class="service-card__title" data-key="svc_bespoke_title"></h3>
+              <p class="service-card__desc" data-key="svc_bespoke_desc"></p>
+              <div class="service-card__badge" data-key="svc_bespoke_badge"></div>
+            </div>
+          </label>
+          <label class="service-card" data-service="made-to-measure">
+            <input type="radio" name="service" value="made-to-measure">
+            <div class="service-card__inner">
+              <div class="service-card__icon">◈</div>
+              <h3 class="service-card__title" data-key="svc_mtm_title"></h3>
+              <p class="service-card__desc" data-key="svc_mtm_desc"></p>
+              <div class="service-card__badge" data-key="svc_mtm_badge"></div>
+            </div>
+          </label>
+          <label class="service-card" data-service="corporate">
+            <input type="radio" name="service" value="corporate">
+            <div class="service-card__inner">
+              <div class="service-card__icon">◉</div>
+              <h3 class="service-card__title" data-key="svc_corp_title"></h3>
+              <p class="service-card__desc" data-key="svc_corp_desc"></p>
+              <div class="service-card__badge" data-key="svc_corp_badge"></div>
+            </div>
+          </label>
+        </div>
+
+        <!-- Preferred Date -->
+        <div class="form-group form-group--date">
+          <label class="form-label" data-key="field_date"></label>
+          <input type="date" class="form-input form-input--date" id="preferredDate" min="">
+          <span class="form-hint" data-key="hint_date"></span>
+        </div>
+
+        <!-- Notes -->
+        <div class="form-group form-group--full">
+          <label class="form-label" data-key="field_notes"></label>
+          <textarea class="form-textarea" id="notes" rows="4" placeholder="" data-ph="ph_notes"></textarea>
+        </div>
+
+        <div class="step-actions">
+          <button class="btn-back" onclick="prevStep(2)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            <span data-key="btn_back"></span>
+          </button>
+          <button class="btn-next" onclick="nextStep(2)">
+            <span data-key="btn_next"></span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- ── STEP 3: Measurements ── -->
+      <div class="booking-step hidden" id="step3" data-step="3">
+        <div class="step-header">
+          <span class="step-eyebrow" data-key="prog_measurements"></span>
+          <h2 class="step-title" data-key="step3_title"></h2>
+          <p class="step-desc" data-key="step3_desc"></p>
+        </div>
+
+        <!-- Measurement Method Tabs -->
+        <div class="meas-tabs">
+          <button class="meas-tab active" data-tab="manual" onclick="switchMeasTab('manual')">
+            <span class="meas-tab__icon">📐</span>
+            <span data-key="meas_manual_tab"></span>
+          </button>
+          <button class="meas-tab" data-tab="file" onclick="switchMeasTab('file')">
+            <span class="meas-tab__icon">📎</span>
+            <span data-key="meas_file_tab"></span>
+          </button>
+          <button class="meas-tab" data-tab="video" onclick="switchMeasTab('video')">
+            <span class="meas-tab__icon">🎥</span>
+            <span data-key="meas_video_tab"></span>
+          </button>
+        </div>
+
+        <!-- Manual Entry -->
+        <div class="meas-panel" id="measManual">
+          <div class="meas-hint">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <span data-key="meas_hint"></span>
+          </div>
+          <div class="meas-grid">
+            <div class="meas-field">
+              <label class="meas-label" data-key="meas_chest"></label>
+              <div class="meas-input-wrap">
+                <input type="number" class="meas-input" id="mChest" min="70" max="160" step="0.5">
+                <span class="meas-unit">cm</span>
+              </div>
+              <div class="meas-body-ref chest-ref">👕</div>
+            </div>
+            <div class="meas-field">
+              <label class="meas-label" data-key="meas_shoulder"></label>
+              <div class="meas-input-wrap">
+                <input type="number" class="meas-input" id="mShoulder" min="30" max="60" step="0.5">
+                <span class="meas-unit">cm</span>
+              </div>
+            </div>
+            <div class="meas-field">
+              <label class="meas-label" data-key="meas_waist"></label>
+              <div class="meas-input-wrap">
+                <input type="number" class="meas-input" id="mWaist" min="60" max="150" step="0.5">
+                <span class="meas-unit">cm</span>
+              </div>
+            </div>
+            <div class="meas-field">
+              <label class="meas-label" data-key="meas_hip"></label>
+              <div class="meas-input-wrap">
+                <input type="number" class="meas-input" id="mHip" min="70" max="160" step="0.5">
+                <span class="meas-unit">cm</span>
+              </div>
+            </div>
+            <div class="meas-field">
+              <label class="meas-label" data-key="meas_arm"></label>
+              <div class="meas-input-wrap">
+                <input type="number" class="meas-input" id="mArm" min="40" max="80" step="0.5">
+                <span class="meas-unit">cm</span>
+              </div>
+            </div>
+            <div class="meas-field">
+              <label class="meas-label" data-key="meas_jacket"></label>
+              <div class="meas-input-wrap">
+                <input type="number" class="meas-input" id="mJacket" min="60" max="90" step="0.5">
+                <span class="meas-unit">cm</span>
+              </div>
+            </div>
+            <div class="meas-field">
+              <label class="meas-label" data-key="meas_trouser"></label>
+              <div class="meas-input-wrap">
+                <input type="number" class="meas-input" id="mTrouser" min="80" max="130" step="0.5">
+                <span class="meas-unit">cm</span>
+              </div>
+            </div>
+            <div class="meas-field">
+              <label class="meas-label" data-key="meas_neck"></label>
+              <div class="meas-input-wrap">
+                <input type="number" class="meas-input" id="mNeck" min="30" max="60" step="0.5">
+                <span class="meas-unit">cm</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- File Upload -->
+        <div class="meas-panel hidden" id="measFile">
+          <div class="upload-zone" id="uploadZone" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleFileDrop(event)">
+            <div class="upload-zone__icon">📄</div>
+            <p class="upload-zone__title" data-key="upload_title"></p>
+            <p class="upload-zone__desc" data-key="upload_desc"></p>
+            <button class="btn-upload" onclick="document.getElementById('fileInput').click()">
+              <span data-key="upload_btn"></span>
+            </button>
+            <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png" multiple style="display:none" onchange="handleFileSelect(event)">
+          </div>
+          <div class="upload-preview" id="uploadPreview"></div>
+        </div>
+
+        <!-- Video Upload -->
+        <div class="meas-panel hidden" id="measVideo">
+          <div class="video-upload-wrap">
+            <div class="upload-zone upload-zone--video" id="videoZone" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleVideoDrop(event)">
+              <div class="upload-zone__icon">🎥</div>
+              <p class="upload-zone__title" data-key="video_title"></p>
+              <p class="upload-zone__desc" data-key="video_desc"></p>
+              <button class="btn-upload" onclick="document.getElementById('videoInput').click()">
+                <span data-key="video_btn"></span>
+              </button>
+              <input type="file" id="videoInput" accept="video/*" style="display:none" onchange="handleVideoSelect(event)">
+            </div>
+            <div class="video-tips">
+              <h4 class="video-tips__title" data-key="video_tips_title"></h4>
+              <ul class="video-tips__list" id="videoTipsList"></ul>
+            </div>
+          </div>
+          <div class="video-preview" id="videoPreview"></div>
+        </div>
+
+        <div class="step-actions">
+          <button class="btn-back" onclick="prevStep(3)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            <span data-key="btn_back"></span>
+          </button>
+          <button class="btn-next" onclick="nextStep(3)">
+            <span data-key="btn_next"></span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- ── STEP 4: Suit Customizer ── -->
+      <div class="booking-step hidden" id="step4" data-step="4">
+        <div class="step-header">
+          <span class="step-eyebrow" data-key="prog_customizer"></span>
+          <h2 class="step-title" data-key="step4_title"></h2>
+          <p class="step-desc" data-key="step4_desc"></p>
+        </div>
+
+        <div class="customizer-grid">
+          <!-- Collar -->
+          <div class="customizer-section">
+            <h3 class="customizer-section__title" data-key="cust_collar"></h3>
+            <div class="option-pills" id="collarOptions"></div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="customizer-section">
+            <h3 class="customizer-section__title" data-key="cust_buttons"></h3>
+            <div class="option-pills" id="buttonOptions"></div>
+          </div>
+
+          <!-- Lining Color -->
+          <div class="customizer-section">
+            <h3 class="customizer-section__title" data-key="cust_lining"></h3>
+            <div class="color-swatches" id="liningColors"></div>
+          </div>
+
+          <!-- Pocket Style -->
+          <div class="customizer-section">
+            <h3 class="customizer-section__title" data-key="cust_pocket"></h3>
+            <div class="option-pills" id="pocketOptions"></div>
+          </div>
+
+          <!-- Fabric Type -->
+          <div class="customizer-section customizer-section--full">
+            <h3 class="customizer-section__title" data-key="cust_fabric"></h3>
+            <div class="fabric-selector" id="fabricSelector"></div>
+          </div>
+
+          <!-- Special Requests -->
+          <div class="customizer-section customizer-section--full">
+            <label class="form-label" data-key="cust_special"></label>
+            <textarea class="form-textarea" id="specialRequests" rows="3" placeholder="" data-ph="ph_special"></textarea>
+          </div>
+        </div>
+
+        <!-- Summary Card -->
+        <div class="booking-summary" id="bookingSummary">
+          <h3 class="summary-title" data-key="summary_title"></h3>
+          <div class="summary-grid" id="summaryGrid"></div>
+        </div>
+
+        <div class="step-actions step-actions--final">
+          <button class="btn-back" onclick="prevStep(4)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            <span data-key="btn_back"></span>
+          </button>
+          <button class="btn-submit-whatsapp" onclick="submitWhatsApp()">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+            <span data-key="btn_whatsapp_submit"></span>
+          </button>
+          <button class="btn-submit-form" onclick="submitForm()" id="submitFormBtn" style="display:none">
+            <span data-key="btn_form_submit"></span>
+          </button>
+        </div>
+      </div>
+
+    </div><!-- /booking-container -->
+  </main>
+
+  <!-- ══════════════ CTA STRIP ══════════════ -->
+  <section class="booking-cta-strip">
+    <div class="cta-strip__inner">
+      <p class="cta-strip__text" data-key="cta_strip_text"></p>
+      <a href="https://wa.me/201555277205" target="_blank" rel="noopener" class="btn-whatsapp-cta">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+        <span data-key="cta_whatsapp"></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="assets/logo/logo-vertical.svg" alt="ELSMNODY BESPOKE" class="footer__logo">
+        <p class="footer__tagline" data-key="footer_tagline"></p>
+      </div>
+      <nav class="footer__nav">
+        <h4 class="footer__nav-title" data-key="footer_nav_title"></h4>
+        <a href="index.html"       data-key="nav_home"></a>
+        <a href="collections.html" data-key="nav_collections"></a>
+        <a href="fabrics.html"     data-key="nav_fabrics"></a>
+        <a href="about.html"       data-key="nav_about"></a>
+        <a href="gallery.html"     data-key="nav_gallery"></a>
+        <a href="contact.html"     data-key="nav_contact"></a>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy" data-key="footer_copy"></p>
+    </div>
+  </footer>
+
+  <!-- ══════════════ WHATSAPP FLOAT ══════════════ -->
+  
+
+  <!-- ══════════════ SUCCESS MODAL ══════════════ -->
+  <div class="modal-overlay hidden" id="successModal">
+    <div class="modal">
+      <div class="modal__icon">✓</div>
+      <p class="modal__booking-id" id="bookingIdDisplay" style="font-family:monospace;font-size:18px;color:#C9A84C;font-weight:bold;margin:10px 0;letter-spacing:1px;"></p>
+      <h3 class="modal__title" data-key="modal_title"></h3>
+      <p class="modal__text" data-key="modal_text"></p>
+      <button class="btn-primary" onclick="closeModal()">
+        <span data-key="modal_btn"></span>
+      </button>
+    </div>
+  </div>
+
+  <script src="js/booking.js"></script>
+  <script src="js/booking-api.js"></script>
+  <script src="js/seo.js"></script>
+  <script src="js/whatsapp.js"></script>
+</body>
+</html>

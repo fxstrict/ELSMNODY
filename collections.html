@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="مجموعات إلسمنودي بيسبوك — بدلات رجالية فاخرة على المقاس للتنفيذيين والأفراح والقضاء.">
+  <title>المجموعات | ELSMNODY BESPOKE</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/collections.css">
+  <style>
+    html { scroll-padding-top: 80px; }
+    .collections-index-hero {
+      height: 50vh; min-height: 400px;
+      display: flex; align-items: flex-end;
+      background-image: url('../assets/images/hero/hero-main.webp');
+      background-size: cover; background-position: center 20%;
+      position: relative; padding-top: 80px;
+    }
+    .collections-index-hero__overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(10,10,8,0.4) 0%, rgba(10,10,8,0.85) 100%);
+    }
+    .collections-index-hero__content {
+      position: relative; z-index: 2;
+      max-width: var(--container-max); margin: 0 auto;
+      padding: 0 var(--space-6) var(--space-16); width: 100%;
+    }
+    .collections-index-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-5);
+      margin-top: var(--space-16);
+    }
+    /* Black Label card — full width, prominent */
+    .collections-index-grid .coll-index-card:last-child {
+      grid-column: span 3;
+    }
+    .coll-index-card {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      border: var(--divider-gold);
+      text-decoration: none;
+      transition: var(--transition-base);
+    }
+    .coll-index-card:hover {
+      border-color: var(--color-gold);
+      box-shadow: var(--shadow-xl), var(--glow-gold);
+      transform: translateY(-6px);
+    }
+    .coll-index-card__img-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+    /* Normal cards: portrait ratio */
+    .coll-index-card:not(:last-child) .coll-index-card__img-wrap { aspect-ratio: 2/3; }
+    /* Black Label: landscape */
+    .coll-index-card:last-child .coll-index-card__img-wrap { aspect-ratio: 16/7; }
+
+    .coll-index-card__img-wrap img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform var(--duration-slow) var(--ease-luxury);
+    }
+    .coll-index-card:hover .coll-index-card__img-wrap img { transform: scale(1.06); }
+    .coll-index-card__overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,10,8,0.92) 0%, transparent 55%);
+      display: flex; flex-direction: column;
+      justify-content: flex-end;
+      padding: var(--space-6);
+    }
+    .coll-index-card:last-child .coll-index-card__overlay {
+      background: linear-gradient(to right, rgba(10,10,8,0.92) 0%, rgba(10,10,8,0.3) 60%);
+      justify-content: center;
+      align-items: flex-start;
+    }
+    [dir="rtl"] .coll-index-card:last-child .coll-index-card__overlay {
+      background: linear-gradient(to left, rgba(10,10,8,0.92) 0%, rgba(10,10,8,0.3) 60%);
+      align-items: flex-end;
+    }
+    .coll-index-card__badge {
+      font-size: var(--text-xs); letter-spacing: var(--tracking-widest);
+      text-transform: uppercase; color: var(--color-gold);
+      margin-bottom: var(--space-2);
+    }
+    .coll-index-card__title {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      color: var(--color-ivory);
+      font-weight: var(--weight-regular);
+      margin-bottom: var(--space-3);
+    }
+    [dir="rtl"] .coll-index-card__title { font-family: 'IBM Plex Sans Arabic', serif; }
+    .coll-index-card:last-child .coll-index-card__title { font-size: var(--text-4xl); }
+
+    .coll-index-card__desc {
+      font-size: var(--text-sm);
+      color: var(--color-text-secondary);
+      line-height: var(--leading-relaxed);
+      max-width: 380px;
+      opacity: 0; transform: translateY(8px);
+      transition: opacity var(--duration-base) var(--ease-out),
+                  transform var(--duration-base) var(--ease-out);
+    }
+    .coll-index-card:hover .coll-index-card__desc { opacity: 1; transform: translateY(0); }
+
+    .coll-index-card__cta {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      font-size: var(--text-xs); letter-spacing: var(--tracking-wider);
+      text-transform: uppercase; color: var(--color-gold);
+      margin-top: var(--space-4);
+      opacity: 0; transform: translateY(6px);
+      transition: opacity var(--duration-base) var(--ease-out) 0.05s,
+                  transform var(--duration-base) var(--ease-out) 0.05s;
+    }
+    .coll-index-card:hover .coll-index-card__cta { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 900px) {
+      .collections-index-grid { grid-template-columns: 1fr 1fr; }
+      .collections-index-grid .coll-index-card:last-child { grid-column: span 2; }
+      .coll-index-card:last-child .coll-index-card__img-wrap { aspect-ratio: 16/9; }
+    }
+    @media (max-width: 540px) {
+      .collections-index-grid { grid-template-columns: 1fr; }
+      .collections-index-grid .coll-index-card:last-child { grid-column: span 1; }
+    }
+  </style>
+  <link rel="stylesheet" href="css/whatsapp.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" aria-label="ELSMNODY BESPOKE">
+        <img src="assets/logo/logo.svg" alt="ELSMNODY BESPOKE" class="navbar__logo"
+          onerror="this.outerHTML='<span style=\'font-family:var(--font-display);font-size:1rem;color:var(--color-gold);letter-spacing:4px\'>ELSMNODY</span>'">
+      </a>
+      <div class="navbar__cta"></div>
+      <button class="navbar__toggle" aria-label="القائمة"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="collections-index-hero">
+    <div class="collections-index-hero__overlay"></div>
+    <div class="collections-index-hero__content">
+      <span class="eyebrow" id="ci-eyebrow">مجموعاتنا</span>
+      <h1 id="ci-title" style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);color:var(--color-ivory);font-weight:400;line-height:1.1;margin-top:var(--space-3)">
+        أناقة لكل مناسبة
+      </h1>
+    </div>
+  </div>
+
+  <!-- GRID -->
+  <section class="section" style="background:var(--color-bg-deep)">
+    <div class="container">
+      <div class="collections-index-grid" id="ci-grid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section style="padding:var(--space-20) 0;background:var(--color-bg-dark);border-top:var(--divider-gold);text-align:center">
+    <div class="container reveal">
+      <span class="eyebrow" id="ci-cta-eyebrow">تواصل معنا</span>
+      <h2 id="ci-cta-title" style="font-family:var(--font-display);font-size:var(--text-4xl);color:var(--color-ivory);font-weight:400;margin:var(--space-3) 0 var(--space-4)">ابدأ رحلة بدلتك الآن</h2>
+      <div class="divider-gold"></div>
+      <p id="ci-cta-desc" style="color:var(--color-text-secondary);max-width:500px;margin:var(--space-6) auto var(--space-10);line-height:var(--leading-relaxed)">اختر مجموعتك وتواصل معنا لحجز استشارة مجانية مع مصممنا.</p>
+      <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap">
+        <a href="https://wa.me/201555277205" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display:inline;vertical-align:middle;margin-inline-end:6px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.123 1.528 5.855L.057 23.926l6.261-1.644A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.369l-.359-.213-3.718.976.992-3.625-.234-.372A9.818 9.818 0 1112 21.818z"/></svg>
+          WhatsApp
+        </a>
+        <a href="index.html#contact" class="btn btn-secondary btn-lg" id="ci-cta-btn">اتصل بنا</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer" style="background:var(--color-bg-deep);border-top:var(--divider-gold);padding:var(--space-10) 0 var(--space-6)"></footer>
+
+  
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox__close" onclick="closeLightbox()">✕</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="">
+  </div>
+
+  <script src="js/collections.js"></script>
+  <script>
+  // collections.html index page — override detectCollection to return null
+  // and build its own grid
+  document.addEventListener('DOMContentLoaded', () => {
+    const lang  = Lang.current();
+    const IMG_  = 'assets/images/';
+
+    const LABELS = {
+      ar: { eyebrow:'مجموعاتنا', title:'أناقة لكل مناسبة',
+            cta_eyebrow:'تواصل معنا', cta_title:'ابدأ رحلة بدلتك الآن',
+            cta_desc:'اختر مجموعتك وتواصل معنا لحجز استشارة مجانية مع مصممنا.',
+            cta_btn:'اتصل بنا', explore:'اكتشف →' },
+      en: { eyebrow:'Collections', title:'Elegance for Every Occasion',
+            cta_eyebrow:'Contact Us', cta_title:'Begin Your Bespoke Journey',
+            cta_desc:'Choose your collection and contact us to book a free consultation with our designer.',
+            cta_btn:'Call Us', explore:'Explore →' },
+    };
+
+    function buildGrid() {
+      const L   = LABELS[Lang.current()];
+      const lng = Lang.current();
+      document.getElementById('ci-eyebrow').textContent     = L.eyebrow;
+      document.getElementById('ci-title').textContent       = L.title;
+      document.getElementById('ci-cta-eyebrow').textContent = L.cta_eyebrow;
+      document.getElementById('ci-cta-title').textContent   = L.cta_title;
+      document.getElementById('ci-cta-desc').textContent    = L.cta_desc;
+      document.getElementById('ci-cta-btn').textContent     = L.cta_btn;
+
+      const items = [
+        { key:'executive',   href:'collections/executive.html'   },
+        { key:'wedding',     href:'collections/wedding.html'     },
+        { key:'judicial',    href:'collections/judicial.html'    },
+        { key:'black-label', href:'collections/black-label.html' },
+      ];
+
+      const grid = document.getElementById('ci-grid');
+      grid.innerHTML = items.map((item, i) => {
+        const c = COLLECTIONS_DATA[item.key];
+        const d = c[lng];
+        return `
+          <a href="${item.href}" class="coll-index-card reveal reveal-delay-${(i%3)+1}">
+            <div class="coll-index-card__img-wrap">
+              <img src="${IMG_}${c.images.gallery[0]}" alt="${d.eyebrow}" loading="lazy">
+              <div class="coll-index-card__overlay">
+                <span class="coll-index-card__badge">${d.eyebrow}</span>
+                <h2 class="coll-index-card__title">${d.hero_title}</h2>
+                <p class="coll-index-card__desc">${d.hero_sub}</p>
+                <span class="coll-index-card__cta">${L.explore}</span>
+              </div>
+            </div>
+          </a>
+        `;
+      }).join('');
+
+      // Re-init scroll reveal after DOM update
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    }
+
+    // Override Lang toggle to rebuild grid
+    const origToggle = Lang.toggle.bind(Lang);
+    window.Lang = Object.assign({}, Lang, {
+      toggle: () => { origToggle(); buildGrid(); renderNavbar(); renderFooter(); }
+    });
+
+    buildGrid();
+    renderNavbar();
+    renderFooter();
+
+    // Navbar scroll
+    const nb = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => nb?.classList.toggle('scrolled', window.scrollY > 60), { passive: true });
+    document.querySelector('.navbar__toggle')?.addEventListener('click', window.openMobileMenu);
+    document.getElementById('lightbox')?.addEventListener('click', e => { if (e.target===e.currentTarget) window.closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key==='Escape') { window.closeLightbox(); window.closeMobileMenu(); } });
+  });
+  </script>
+  <script src="js/seo.js"></script>
+  <script src="js/whatsapp.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://fxstrict.github.io/ELSMNODY/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fxstrict.github.io/ELSMNODY/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fxstrict.github.io/ELSMNODY/"/>
+    <image:image>
+      <image:loc>https://fxstrict.github.io/ELSMNODY/assets/images/hero/hero-main.webp</image:loc>
+      <image:title>ELSMNODY BESPOKE — Crafting Presence. Tailoring Influence.</image:title>
+    </image:image>
+  </url>
+
+  <!-- About Founder -->
+  <url>
+    <loc>https://fxstrict.github.io/ELSMNODY/about.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fxstrict.github.io/ELSMNODY/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fxstrict.github.io/ELSMNODY/about.html"/>
+    <image:image>
+      <image:loc>https://fxstrict.github.io/ELSMNODY/assets/images/founder/founder-portrait.webp</image:loc>
+      <image:title>Mohamed El-Smnody — Founder of ELSMNODY BESPOKE</image:title>
+    </image:image>
+  </url>
+
+  <!-- Collections Index -->
+  <url>
+    <loc>https://fxstrict.github.io/ELSMNODY/collections.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fxstrict.github.io/ELSMNODY/collections.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fxstrict.github.io/ELSMNODY/collections.html"/>
+    <image:image>
+      <image:loc>https://fxstrict.github.io/ELSMNODY/assets/images/collections/collection-executive.webp</image:loc>
+      <image:title>ELSMNODY BESPOKE Collections</image:title>
+    </image:image>
+  </url>
+
+  <!-- Executive Collection -->
+  <url>
+    <loc>https://fxstrict.github.io/ELSMNODY/collections/executive.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fxstrict.github.io/ELSMNODY/collections/executive.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fxstrict.github.io/ELSMNODY/collections/executive.html"/>
+    <image:image>
+      <image:loc>https://fxstrict.github.io/ELSMNODY/assets/images/collections/collection-executive.webp</image:loc>
+      <image:title>Executive Business Suits — ELSMNODY BESPOKE</image:title>
+    </image:image>
+  </url>
+
+  <!-- Wedding Collection -->
+  <url>
+    <loc>https://fxstrict.github.io/ELSMNODY/collections/wedding.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fxstrict.github.io/ELSMNODY/collections/wedding.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fxstrict.github.io/ELSMNODY/collections/wedding.html"/>
+    <image:image>
+      <image:loc>https://fxstrict.github.io/ELSMNODY/assets/images/collections/collection-wedding.webp</image:loc>
+      <image:title>Wedding Suits — ELSMNODY BESPOKE</image:title>
+    </image:image>
+  </url>
+
+  <!-- Judicial Collection -->
+  <url>
+    <loc>https://fxstrict.github.io/ELSMNODY/collections/judicial.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fxstrict.github.io/ELSMNODY/collections/judicial.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fxstrict.github.io/ELSMNODY/collections/judicial.html"/>
+    <image:image>
+      <image:loc>https://fxstrict.github.io/ELSMNODY/assets/images/collections/collection-judicial.webp</image:loc>
+      <image:title>Judicial Suits for Judges &amp; Lawyers — ELSMNODY BESPOKE</image:title>
+    </image:image>
+  </url>
+
+  <!-- Black Label Collection -->
+  <url>
+    <loc>https://fxstrict.github.io/ELSMNODY/collections/black-label.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fxstrict.github.io/ELSMNODY/collections/black-label.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fxstrict.github.io/ELSMNODY/collections/black-label.html"/>
+    <image:image>
+      <image:loc>https://fxstrict.github.io/ELSMNODY/assets/images/collections/collection-black-label.webp</image:loc>
+      <image:title>Black Label — The Pinnacle of Luxury | ELSMNODY BESPOKE</image:title>
+    </image:image>
+  </url>
+
+  <!-- Fabrics -->
+  <url>
+    <loc>https://fxstrict.github.io/ELSMNODY/fabrics.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fxstrict.github.io/ELSMNODY/fabrics.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fxstrict.github.io/ELSMNODY/fabrics.html"/>
+    <image:image>
+      <image:loc>https://fxstrict.github.io/ELSMNODY/assets/images/fabrics/fabric-wall.webp</image:loc>
+      <image:title>Luxury Fabric Collection — ELSMNODY BESPOKE</image:title>
+    </image:image>
+  </url>
+
+  <!-- Gallery -->
+  <url>
+    <loc>https://fxstrict.github.io/ELSMNODY/gallery.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fxstrict.github.io/ELSMNODY/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fxstrict.github.io/ELSMNODY/gallery.html"/>
+    <image:image>
+      <image:loc>https://fxstrict.github.io/ELSMNODY/assets/images/lifestyle/lifestyle-redcarpet.webp</image:loc>
+      <image:title>ELSMNODY BESPOKE Portfolio Gallery</image:title>
+    </image:image>
+  </url>
+
+  <!-- Contact / Booking -->
+  <url>
+    <loc>https://fxstrict.github.io/ELSMNODY/contact.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fxstrict.github.io/ELSMNODY/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fxstrict.github.io/ELSMNODY/contact.html"/>
+  </url>
+
+  <!-- Blog Index -->
+  <url>
+    <loc>https://fxstrict.github.io/ELSMNODY/blog/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fxstrict.github.io/ELSMNODY/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fxstrict.github.io/ELSMNODY/blog/"/>
+  </url>
+
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://fxstrict.github.io/ELSMNODY/blog/best-suits-lawyers-egypt.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://fxstrict.github.io/ELSMNODY/blog/judges-suits-egypt.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://fxstrict.github.io/ELSMNODY/blog/bespoke-vs-made-to-measure.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://fxstrict.github.io/ELSMNODY/blog/best-suit-fabrics.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://fxstrict.github.io/ELSMNODY/blog/executive-suits-guide.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

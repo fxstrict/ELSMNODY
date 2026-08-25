@@ -1,0 +1,16 @@
+# robots.txt — ELSMNODY BESPOKE
+# https://fxstrict.github.io/ELSMNODY/
+
+User-agent: *
+Allow: /
+
+# Disallow admin / script files
+Disallow: /google-apps-script/
+Disallow: /docs/
+Disallow: /PROJECT_STATE.json
+
+# Sitemap
+Sitemap: https://fxstrict.github.io/ELSMNODY/sitemap.xml
+
+# Crawl-delay for polite bots
+Crawl-delay: 2

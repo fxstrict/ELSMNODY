@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="إلسمنودي بيسبوك — بيت الخياطة الرجالية الفاخرة في مصر. بدلات على المقاس بأرقى الأقمشة الإيطالية والإنجليزية.">
+  <meta name="keywords" content="بدلة على المقاس, خياطة فاخرة, بدلات رجالية, مصر, إلسمنودي">
+  <meta property="og:title"       content="إلسمنودي بيسبوك — Crafting Presence">
+  <meta property="og:description" content="محمد السمنودي، مؤسس إلسمنودي بيسبوك — حرفي خياطة رجالية فاخرة منذ أكثر من 20 عاماً في مصر والخليج. بدلات على المقاس بأرقى الأقمشة الإيطالية والإنجليزية، تفصيل يليق بمكانتك.">
+  <meta property="og:image"       content="https://fxstrict.github.io/ELSMNODY/assets/images/og/og-home.webp">
+  <meta property="og:image:width"  content="1536">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:alt"   content="محمد السمنودي، مصمم الأزياء ومؤسس إلسمنودي بيسبوك، داخل الأتيليه">
+  <meta property="og:url"         content="https://fxstrict.github.io/ELSMNODY/">
+  <meta property="og:site_name"   content="ELSMNODY BESPOKE">
+  <meta property="og:locale"      content="ar_EG">
+  <meta property="og:type"        content="website">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="إلسمنودي بيسبوك — Crafting Presence">
+  <meta name="twitter:description" content="محمد السمنودي، مؤسس إلسمنودي بيسبوك — حرفي خياطة رجالية فاخرة منذ أكثر من 20 عاماً في مصر والخليج.">
+  <meta name="twitter:image"       content="https://fxstrict.github.io/ELSMNODY/assets/images/og/og-home.webp">
+  <title>إلسمنودي بيسبوك | ELSMNODY BESPOKE</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/home.css">
+
+  <!-- RTL / LTR direction handling -->
+  <style>
+    /* Bilingual direction helpers */
+    [dir="rtl"] .navbar__links,
+    [dir="rtl"] .navbar__cta { flex-direction: row-reverse; }
+
+    [dir="rtl"] .hero__actions { flex-direction: row-reverse; }
+
+    [dir="rtl"] .footer__top { direction: rtl; }
+
+    [dir="rtl"] .why__card,
+    [dir="rtl"] .testimonial-card { text-align: right; }
+
+    [dir="rtl"] .testimonial-card {
+      border-left: none;
+      border-right: 3px solid var(--color-gold);
+    }
+
+    [dir="ltr"] .testimonial-card {
+      border-left: 3px solid var(--color-gold);
+      border-right: none;
+    }
+
+    [dir="rtl"] .divider-gold-left { margin: var(--space-6) 0; }
+
+    [dir="rtl"] .founder-preview__img-accent {
+      right: auto;
+      left: -20px;
+    }
+
+    [dir="rtl"] .coll-card__link { flex-direction: row-reverse; }
+
+    /* Arabic font override on RTL */
+    [dir="rtl"] body,
+    [dir="rtl"] p,
+    [dir="rtl"] li,
+    [dir="rtl"] span:not(.hero__eyebrow):not(.eyebrow) {
+      font-family: var(--font-arabic);
+    }
+    [dir="rtl"] h1,
+    [dir="rtl"] h2,
+    [dir="rtl"] h3,
+    [dir="rtl"] h4 {
+      font-family: 'IBM Plex Sans Arabic', 'Playfair Display', serif;
+    }
+
+    /* Numbers remain LTR inside RTL */
+    .journey__step-num { direction: ltr; unicode-bidi: embed; }
+
+    /* Language toggle button — always visually stable */
+    #lang-toggle {
+      min-width: 42px;
+      font-weight: var(--weight-semibold);
+      letter-spacing: 0.05em;
+    }
+  </style>
+  <link rel="stylesheet" href="css/whatsapp.css">
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <!-- Logo -->
+      <a href="index.html" class="navbar__logo-link" aria-label="ELSMNODY BESPOKE">
+        <img
+          src="assets/logo/logo.svg"
+          alt="ELSMNODY BESPOKE"
+          class="navbar__logo"
+          onerror="this.outerHTML='<span style=\'font-family:var(--font-display);font-size:1.1rem;color:var(--color-gold);letter-spacing:4px\'>ELSMNODY</span>'"
+        >
+      </a>
+      <!-- Links injected by JS -->
+      <!-- CTA injected by JS -->
+      <div class="navbar__cta"></div>
+      <!-- Hamburger -->
+      <button class="navbar__toggle" aria-label="القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <!-- Mobile menu injected by JS -->
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero" class="hero"></section>
+
+  <!-- ===================== WHY ===================== -->
+  <section id="why" class="why section"></section>
+
+  <!-- ===================== COLLECTIONS ===================== -->
+  <section id="collections" class="collections section"></section>
+
+  <!-- ===================== TAILORING JOURNEY ===================== -->
+  <section id="journey" class="journey section"></section>
+
+  <!-- ===================== FABRICS ===================== -->
+  <section id="fabrics" class="fabrics-preview section"></section>
+
+  <!-- ===================== GALLERY ===================== -->
+  <section id="gallery" class="gallery-preview section"></section>
+
+  <!-- ===================== FOUNDER ===================== -->
+  <section id="founder" class="founder-preview section"></section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section id="testimonials" class="testimonials section"></section>
+
+  <!-- ===================== CONTACT CTA STRIP ===================== -->
+  <section id="contact" style="
+    padding: var(--space-20) 0;
+    background: linear-gradient(135deg, var(--color-bg-deep) 0%, #0e0e0b 50%, var(--color-bg-deep) 100%);
+    border-top: var(--divider-gold);
+    border-bottom: var(--divider-gold);
+    text-align: center;
+  ">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow" id="contact-eyebrow">احجز موعدك</span>
+        <h2 class="section-title" id="contact-title" style="margin-bottom:var(--space-4)">ابدأ رحلة بدلتك الآن</h2>
+        <div class="divider-gold"></div>
+        <p id="contact-desc" style="color:var(--color-text-secondary);max-width:520px;margin:var(--space-6) auto var(--space-10);line-height:var(--leading-relaxed)">
+          تواصل معنا الآن لحجز استشارتك المجانية. سنساعدك في اختيار القماش المثالي وتصميم بدلة تعكس شخصيتك.
+        </p>
+        <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap">
+          <a
+            href="https://wa.me/201555277205?text=مرحباً، أريد حجز موعد استشارة"
+            class="btn btn-whatsapp btn-lg"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:inline;vertical-align:middle;margin-inline-end:8px">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.123 1.528 5.855L.057 23.926l6.261-1.644A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.369l-.359-.213-3.718.976.992-3.625-.234-.372A9.818 9.818 0 1112 21.818z"/>
+            </svg>
+            WhatsApp
+          </a>
+          <a href="tel:+201555277205" class="btn btn-secondary btn-lg" id="contact-call">اتصل بنا</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="footer"></footer>
+
+  
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox__close" onclick="closeLightbox()" aria-label="إغلاق">✕</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="ELSMNODY Gallery">
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/home.js"></script>
+
+  <!-- Update contact section on lang change -->
+  <script>
+    const _origRenderAll = window.renderAll || (() => {});
+    document.addEventListener('DOMContentLoaded', () => {
+      // Observer for contact section language update
+      const contactObserver = new MutationObserver(() => {
+        const lang = document.documentElement.lang;
+        const T = lang === 'ar'
+          ? { ey: 'احجز موعدك', ti: 'ابدأ رحلة بدلتك الآن', de: 'تواصل معنا الآن لحجز استشارتك المجانية. سنساعدك في اختيار القماش المثالي وتصميم بدلة تعكس شخصيتك.', call: 'اتصل بنا' }
+          : { ey: 'Book Appointment', ti: 'Begin Your Bespoke Journey', de: 'Contact us now to book your free consultation. We will guide you through fabric selection and design to craft a suit that truly reflects your identity.', call: 'Call Us' };
+        const ey = document.getElementById('contact-eyebrow');
+        const ti = document.getElementById('contact-title');
+        const de = document.getElementById('contact-desc');
+        const ca = document.getElementById('contact-call');
+        if (ey) ey.textContent = T.ey;
+        if (ti) ti.textContent = T.ti;
+        if (de) de.textContent = T.de;
+        if (ca) ca.textContent = T.call;
+      });
+      contactObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+    });
+  </script>
+  <script src="js/seo.js"></script>
+  <script src="js/whatsapp.js"></script>
+</body>
+</html>

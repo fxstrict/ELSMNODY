@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="مجموعة الأفراح — إلسمنودي بيسبوك، بيت الخياطة الرجالية الفاخرة في مصر.">
+  <meta property="og:title"       content="مجموعة الأفراح | ELSMNODY BESPOKE">
+  <meta property="og:type"        content="website">
+  <title>مجموعة الأفراح | ELSMNODY BESPOKE</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/design-system.css">
+  <link rel="stylesheet" href="../css/collections.css">
+
+  <style>
+    /* Scroll offset for fixed navbar */
+    html { scroll-padding-top: 80px; }
+    #coll-hero { padding-top: 80px; }
+
+    /* Smooth language transition */
+    body { transition: direction 0s; }
+  </style>
+  <link rel="stylesheet" href="../css/whatsapp.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="../index.html" aria-label="ELSMNODY BESPOKE">
+        <img
+          src="../assets/logo/logo.svg"
+          alt="ELSMNODY BESPOKE"
+          class="navbar__logo"
+          onerror="this.outerHTML='<span style=\'font-family:var(--font-display);font-size:1rem;color:var(--color-gold);letter-spacing:4px\'>ELSMNODY</span>'"
+        >
+      </a>
+      <div class="navbar__cta"></div>
+      <button class="navbar__toggle" aria-label="القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="coll-hero" class="coll-hero"></section>
+
+  <!-- DESCRIPTION + FEATURES -->
+  <section id="coll-desc" class="coll-desc section"></section>
+
+  <!-- GALLERY -->
+  <section id="coll-gallery" class="coll-gallery section"></section>
+
+  <!-- SPECS + CTA -->
+  <section id="coll-specs" class="coll-specs section"></section>
+
+  <!-- OTHER COLLECTIONS -->
+  <section id="coll-others" class="coll-others section"></section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer" style="background:var(--color-bg-deep);border-top:var(--divider-gold);padding:var(--space-10) 0 var(--space-6)"></footer>
+
+  
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الصورة">
+    <button class="lightbox__close" onclick="closeLightbox()" aria-label="إغلاق">✕</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="ELSMNODY Gallery">
+  </div>
+
+  <!-- Script -->
+  <script src="../js/collections.js"></script>
+
+  <script src="../js/seo.js"></script>
+  <script src="../js/whatsapp.js"></script>
+</body>
+</html>
